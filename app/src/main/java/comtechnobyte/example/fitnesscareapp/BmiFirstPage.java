@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Bmifirstpage extends AppCompatActivity {
+public class BmiFirstPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bmifirstpage);
+        setContentView(R.layout.activity_bmi_first_page);
     }
 }
