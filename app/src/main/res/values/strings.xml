@@ -9,5 +9,8 @@
     <string name="Pwd">Password</string>
     <string name="Rpwd">Re-Enter Password</string>
     <string name="Rbtn">Register</string>
+    <string name="textView3">Already Registered? Login Here</string>
+    <string name="Lbtn">Login</string>
+    <string name="textView5">New Here? Create Account</string>
 
 </resources>
