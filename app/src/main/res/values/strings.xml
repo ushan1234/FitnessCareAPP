@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">FitnessCareAPP</string>
+    <string name="textView">Fitness Care App</string>
+    <string name="textView2">Create New Account</string>
+    <string name="Name">Enter Full Name</string>
+    <string name="Age">Enter Your Age</string>
+    <string name="Date">Enter Date</string>
+    <string name="UName">UserName</string>
+    <string name="Pwd">Password</string>
+    <string name="Rpwd">Re-Enter Password</string>
+    <string name="Rbtn">Register</string>
+
 </resources>
