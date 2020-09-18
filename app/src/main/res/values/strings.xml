@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FitnessCareAPP</string>
+    <string name="cal">BMI CALCULATOR</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="report">REPORT</string>
+    <string name="back">N</string>
+    <string name="next">NEXT</string>
 </resources>

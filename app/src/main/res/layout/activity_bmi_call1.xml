@@ -7,16 +7,85 @@
     tools:context=".BmiCall1">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Breport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#BEB5D5"
         android:backgroundTint="#B3A5D6"
-        android:text="Button"
+        android:text="@string/report"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintVertical_bias="0.863" />
+
+    <RadioButton
+        android:id="@+id/Rmale"
+        android:layout_width="93dp"
+        android:layout_height="29dp"
+        android:buttonTint="#020000"
+        android:text="Male"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <RadioButton
+        android:id="@+id/rfemale"
+        android:layout_width="93dp"
+        android:layout_height="29dp"
+        android:buttonTint="#020000"
+        android:text="@string/female"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.358" />
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="194dp"
+        android:layout_height="222dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/textCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5CD8B0"
+        android:breakStrategy="high_quality"
+        android:focusableInTouchMode="true"
+        android:fontFamily="cursive"
+        android:text="@string/cal"
+        android:textColor="#100B0B"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#BEB5D5"
+        android:backgroundTint="#B3A5D6"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
