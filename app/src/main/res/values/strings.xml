@@ -6,4 +6,8 @@
     <string name="report">REPORT</string>
     <string name="back">N</string>
     <string name="next">NEXT</string>
+    <string name="answer">Answer</string>
+    <string name="fweight">Enter Your Weight (KG) :</string>
+    <string name="Fhight">Enter Your Hight (CM) :</string>
+    <string name="btcalutat">CALCULATE</string>
 </resources>
