@@ -3,17 +3,24 @@ package comtechnobyte.example.fitnesscareapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class Male extends AppCompatActivity {
 
     private Button Calculate;
     private EditText Weight,Hight;
-    private TextView Answer;
+    private TextView Answer,date,gender;
+
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -25,6 +32,12 @@ public class Male extends AppCompatActivity {
         Weight=findViewById(R.id.fweight);
         Hight=findViewById(R.id.fhight);
         Answer=findViewById(R.id.txCal);
+        date=findViewById(R.id.textdate);
+        gender=findViewById(R.id.textgender);
+
+        Intent intent = getIntent();
+        gender.setText(intent.getStringExtra("gender"));
+        date.setText(new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(new Date()));
 
         Calculate.setOnClickListener(new View.OnClickListener() {
             @Override
