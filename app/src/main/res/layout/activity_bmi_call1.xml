@@ -20,29 +20,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.863" />
 
-    <RadioButton
-        android:id="@+id/Rmale"
-        android:layout_width="93dp"
-        android:layout_height="29dp"
-        android:buttonTint="#020000"
-        android:text="Male"
+    <RadioGroup
+        android:id="@+id/genderGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.28" />
+        app:layout_constraintVertical_bias="0.282">
 
-    <RadioButton
-        android:id="@+id/rfemale"
-        android:layout_width="93dp"
-        android:layout_height="29dp"
-        android:buttonTint="#020000"
-        android:text="@string/female"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
+        <RadioButton
+            android:id="@+id/rmale"
+            android:layout_width="93dp"
+            android:layout_height="29dp"
+            android:buttonTint="#020000"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rfemale"
+            android:layout_width="93dp"
+            android:layout_height="29dp"
+            android:buttonTint="#020000"
+            android:text="@string/female" />
+    </RadioGroup>
 
     <CalendarView
         android:id="@+id/calendarView2"
@@ -75,7 +76,7 @@
         app:layout_constraintVertical_bias="0.077" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/nextbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#BEB5D5"

@@ -6,12 +6,13 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class Male extends AppCompatActivity {
 
     private Button Calculate;
-    private Button Weight,Hight;
+    private EditText Weight,Hight;
     private TextView Answer;
 
     @SuppressLint("WrongViewCast")
