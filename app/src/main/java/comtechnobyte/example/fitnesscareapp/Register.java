@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
 
-    EditText FullName,Email,Date,Username,Password,Repassword;
+    EditText FullName,Email,Date,Password,Repassword;
     Button register;
     FirebaseAuth fAuth;
     ProgressBar progressbar;
@@ -35,7 +35,6 @@ public class Register extends AppCompatActivity {
         FullName= findViewById(R.id.Name);
         Email=findViewById(R.id.Email);
         Date=findViewById(R.id.Date);
-        Username=findViewById(R.id.UName);
         Password=findViewById(R.id.Pwd);
         Repassword=findViewById(R.id.Rpwd);
         register=findViewById(R.id.Rbtn);
@@ -79,10 +78,19 @@ public class Register extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(Register.this, "Error !"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            progressbar.setVisibility(View.GONE);
                         }
 
                     }
                 });
+            }
+        });
+
+        Loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Login.class));
+
             }
         });
     }

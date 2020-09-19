@@ -8,14 +8,14 @@
     tools:context=".Login">
 
     <EditText
-        android:id="@+id/UName3"
+        android:id="@+id/Lemail"
         android:layout_width="333dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/background_light"
         android:ems="10"
         android:fontFamily="serif"
-        android:hint="@string/UName"
+        android:hint="@string/Email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UName3"
+        app:layout_constraintTop_toBottomOf="@+id/Lemail"
         app:layout_constraintVertical_bias="0.116" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_light"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/UName3"
+        app:layout_constraintBottom_toTopOf="@+id/Lemail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
