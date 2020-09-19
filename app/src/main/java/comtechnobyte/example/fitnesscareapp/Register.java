@@ -3,6 +3,7 @@ package comtechnobyte.example.fitnesscareapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Register extends AppCompatActivity {
 
     EditText FullName,Email,Date,Username,Password,Repassword;
-    Button Register;
+    Button register;
     FirebaseAuth fAuth;
     ProgressBar progressbar;
     TextView Loginbtn;
@@ -37,18 +38,15 @@ public class Register extends AppCompatActivity {
         Username=findViewById(R.id.UName);
         Password=findViewById(R.id.Pwd);
         Repassword=findViewById(R.id.Rpwd);
-        Register=findViewById(R.id.Rbtn);
+        register=findViewById(R.id.Rbtn);
         Loginbtn=findViewById(R.id.textView3);
 
         fAuth= FirebaseAuth.getInstance();
         progressbar=findViewById(R.id.progressBar2);
 
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        }
 
-        Register.setOnClickListener(new View.OnClickListener() {
+
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email=Email.getText().toString().trim();
@@ -77,7 +75,7 @@ public class Register extends AppCompatActivity {
 
                         if(task.isSuccessful()){
                             Toast.makeText(Register.this,"User Created",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(),Login.class));
                         }
                         else{
                             Toast.makeText(Register.this, "Error !"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
