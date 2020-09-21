@@ -19,6 +19,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class BmiCall1 extends AppCompatActivity {
+    Database myDb;
 
     RadioGroup genderGroup;
     RadioButton maleRadio, femaleradio;
@@ -31,6 +32,7 @@ public class BmiCall1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi_call1);
+        myDb = new Database (this);
 
         genderGroup = findViewById(R.id.genderGroup);
         maleRadio = findViewById(R.id.rmale);
