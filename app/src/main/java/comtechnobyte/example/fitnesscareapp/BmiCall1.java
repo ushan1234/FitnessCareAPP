@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class BmiCall1 extends AppCompatActivity {
     RadioGroup genderGroup;
     RadioButton maleRadio, femaleradio;
 
+
     Button nextBtn,report;
     String gender = "";
 
@@ -34,6 +36,9 @@ public class BmiCall1 extends AppCompatActivity {
         maleRadio = findViewById(R.id.rmale);
         femaleradio = findViewById(R.id.rfemale);
         report=findViewById(R.id.Breport);
+
+
+
 
 
         nextBtn = findViewById(R.id.nextbtn);
@@ -65,8 +70,11 @@ public class BmiCall1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(BmiCall1.this,Beforreoprt.class));
+
             }
         });
+
+
 
 
     }
