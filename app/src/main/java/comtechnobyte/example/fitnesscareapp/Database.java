@@ -3,6 +3,7 @@ package comtechnobyte.example.fitnesscareapp;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -25,12 +26,14 @@ public class Database extends SQLiteOpenHelper  {
 
 
 
+
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         sqLiteDatabase.execSQL("create table "+ TABLE_NAME+"(ID INTEGER PRIMARY KEY AUTOINCREMENT,GENDER TEXT,DATE INT,WEIGHT FLOAT,HIGHT FLOAT,ANSWER CHAR )");
+
 
     }
 
