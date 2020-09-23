@@ -7,12 +7,24 @@
     android:background="@drawable/regi"
     tools:context=".AddHealth">
 
+    <EditText
+        android:id="@+id/cholesterol"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Enter Your Cholesterol Level"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sugar" />
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="333dp"
         android:layout_height="40dp"
         android:layout_marginTop="80dp"
-        android:hint="Select Your Blood Type"
         android:background="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -28,6 +40,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <EditText
+        android:id="@+id/pressure"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Enter Your Pressure Level"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+    <EditText
+        android:id="@+id/sugar"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Enter Your Sugar Level"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressure" />
+
+    <EditText
+        android:id="@+id/datePicker"
+        android:layout_width="333dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Last Checked Date"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cholesterol" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="122dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/holo_red_light"
+        android:text="Add To Report"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
