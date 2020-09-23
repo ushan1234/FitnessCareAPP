@@ -13,5 +13,22 @@
     <string name="Lbtn">Login</string>
     <string name="textView5">New Here? Create Account</string>
     <string name="Email">Enter your Email</string>
+    <string-array name="names">
+        <item>--Select Your Blood Type--</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>--Select Your Gender--</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 
 </resources>
