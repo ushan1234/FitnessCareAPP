@@ -15,6 +15,10 @@ public abstract class Beforreoprt<myDb> extends AppCompatActivity {
 
     Database myDb;
     ArrayList<String> date;
+    ArrayList<String>gender;
+    ArrayList<String>answer;
+    ArrayList<String>weight;
+    ArrayList<String>hight;
 
 
 
@@ -24,20 +28,32 @@ public abstract class Beforreoprt<myDb> extends AppCompatActivity {
         setContentView(R.layout.activity_beforreport);
 
         recyclerView = findViewById(R.id.recyclerView);
-    }
+        myDb = new Database(Beforreoprt.this);
 
-    myDb = new Database(Beforreoprt);
-    date = new ArrayList<>()
+        date = new ArrayList<>();
+        gender = new ArrayList<>();
+        answer = new ArrayList<>();
+        weight = new ArrayList<>();
+        hight = new ArrayList<>();
+
+        disspalyData();
+
+    } 
 
 
-void disspalyData(){
-    Cursor cursor = myDb.readAllData();
-    if (cursor.getCount() == 0 ){
-        Toast.makeText(this."No data.",Toast.LENGTH_LONG).show();
+    void disspalyData() {
+        Cursor cursor = myDb.readAllData();
+        if (cursor.getCount() == 0) {
+            Toast.makeText(this,"No data.", Toast.LENGTH_LONG).show();
 
-    }else {
-        while (cursor.moveToNext()){
-            date.add(cursor.getString(0));
+        } else {
+            while (cursor.moveToNext()) {
+                date.add(cursor.getString(0));
+                gender.add(cursor.getString(0));
+                answer.add(cursor.getString(0));
+                weight.add(cursor.getString(0));
+                hight.add(cursor.getString(0));
+            }
         }
     }
 }
