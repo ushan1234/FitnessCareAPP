@@ -26,6 +26,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="80dp"
         android:background="@android:color/background_light"
+        android:entries="@array/names"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +38,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:background="@android:color/background_light"
+        android:entries="@array/gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
@@ -86,13 +88,26 @@
         android:id="@+id/button7"
         android:layout_width="122dp"
         android:layout_height="45dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/holo_red_light"
         android:text="Add To Report"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Add Your Record"
+        android:textColor="#FF9800"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
