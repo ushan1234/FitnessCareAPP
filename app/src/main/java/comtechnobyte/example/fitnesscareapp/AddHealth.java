@@ -113,10 +113,12 @@ public class AddHealth extends AppCompatActivity {
                 addHelper AddHelper = new addHelper(Blood, Gender, Pressure, Sugar, Cholesterol, Date);
 
                 reference.setValue("First Data Storage");*/
-               addHealth();
+
             }
         });
+
     }
+
         private void addHealth(){
             String Blood= blood.getSelectedItem().toString();
             String Gender= gender.getSelectedItem().toString();
