@@ -21,6 +21,7 @@ import java.util.Locale;
 public class BmiCall1 extends AppCompatActivity {
     Database myDb;
 
+
     RadioGroup genderGroup;
     RadioButton maleRadio, femaleradio;
 

@@ -9,16 +9,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public class Male extends AppCompatActivity {
+    Database myDb;
 
-    private Button Calculate;
-    private EditText Weight,Hight;
-    private TextView Answer,date,gender;
+
+    private Button Calculate,ok;
+    private EditText Weight, Hight;
+    private TextView Answer, date, gender;
 
 
 
@@ -28,12 +31,19 @@ public class Male extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_male);
 
-        Calculate=findViewById(R.id.btnCal);
-        Weight=findViewById(R.id.fweight);
-        Hight=findViewById(R.id.fhight);
-        Answer=findViewById(R.id.txCal);
-        date=findViewById(R.id.textdate);
-        gender=findViewById(R.id.textgender);
+
+
+        myDb=new Database(this);
+        Calculate = findViewById(R.id.btnCal);
+        Weight = findViewById(R.id.fweight);
+        Hight = findViewById(R.id.fhight);
+        Answer = findViewById(R.id.txCal);
+        date = findViewById(R.id.textdate);
+        gender = findViewById(R.id.textgender);
+
+        ok = findViewById(R.id.bok);
+
+
 
         Intent intent = getIntent();
         gender.setText(intent.getStringExtra("gender"));
@@ -61,6 +71,29 @@ public class Male extends AppCompatActivity {
                 else {
                     Answer.setText("You Are Under");
                 }
+
+
+            }
+
+        });
+
+
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean isInserted= myDb.inserData(gender.getText().toString(),
+                        date.getText().toString(),
+                        Weight.getText().toString(),
+                        Hight.getText().toString(),
+                        Answer.getText().toString()
+                        );
+
+
+                if (isInserted == true)
+                    Toast.makeText(Male.this,"Data Inserted",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(Male.this,"Data not Inserted",Toast.LENGTH_LONG).show();
+
 
 
             }

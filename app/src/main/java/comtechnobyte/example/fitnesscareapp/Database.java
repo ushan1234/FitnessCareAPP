@@ -1,6 +1,8 @@
 package comtechnobyte.example.fitnesscareapp;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -17,12 +19,12 @@ public class Database extends SQLiteOpenHelper  {
     public static final String COL_4 = "WEIGHT";
     public static final String COL_5 = "HIGHT";
     public static final String COL_6 = "ANSWER";
-
+    private String[] selectionArgs;
 
 
     public Database(@Nullable Context context) {
         super(context, DATABASE_NAME , null, 1);
-        SQLiteDatabase SQLiteDatabase = this.getWritableDatabase();
+
 
 
 
@@ -42,4 +44,35 @@ public class Database extends SQLiteOpenHelper  {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
+
+    public boolean inserData(String Gender,String date, String weight ,String hight,String answer){
+        SQLiteDatabase SQLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues =new ContentValues();
+        contentValues.put(COL_2,Gender);
+        contentValues.put(COL_3,date);
+        contentValues.put(COL_4,weight);
+        contentValues.put(COL_5,hight);
+        contentValues.put(COL_6,answer);
+        long result=SQLiteDatabase.insert(TABLE_NAME,null,contentValues);
+        if (result == -1)
+            return  false;
+        else
+            return true;
+
+
+    }
+
+    Cursor readAllData() {
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase myDb = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (myDb != null){
+            cursor = myDb.rawQuery(query, selectionArgs, null);
+        }
+        return cursor;
+
+    }
+
+
 }
