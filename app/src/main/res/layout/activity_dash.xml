@@ -13,13 +13,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:fontFamily="@font/baloo"
             android:text="My Dashboard"
             android:textColor="#FBFBFB"
-            android:textSize="25sp"
-            android:layout_margin="20dp"/>
+            android:textSize="25sp" />
 
         <GridLayout
             android:layout_width="match_parent"
@@ -29,12 +31,133 @@
             android:layout_margin="5dp"
             android:alignmentMode="alignMargins"
             android:layout_gravity="center_horizontal"
-            android:columnOrderPreserved="false"/>
+            android:columnOrderPreserved="false">
 
-        
+        <androidx.cardview.widget.CardView
+            android:id="@+id/health"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#25221e"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
 
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/health"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:layout_marginTop="20dp"/>
 
+            </LinearLayout>
 
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bmi"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#25221e"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/bmi"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMI"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/exercise"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#25221e"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/exercise"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exercises"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/food"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#25221e"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/food"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </GridLayout>
 
 
 

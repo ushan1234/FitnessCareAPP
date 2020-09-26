@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/regi"
+    android:background="@color/common_google_signin_btn_text_dark_focused"
     tools:context=".Register">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="203dp"
         android:layout_height="34dp"
-        android:fontFamily="serif"
+        android:fontFamily="@font/baloo"
         android:shadowColor="#4E0E0E"
         android:text="@string/textView"
         android:textAlignment="center"
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="serif"
+        android:fontFamily="@font/baloo"
         android:text="@string/textView2"
         android:textColor="#FFFDFD"
         android:textSize="18sp"
