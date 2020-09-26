@@ -76,5 +76,10 @@ public class Database extends SQLiteOpenHelper  {
 
     }
 
+    public void deleteReport(String id){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.delete(TABLE_NAME,"ID = ?", new String[] {id});
+    }
+
 
 }
