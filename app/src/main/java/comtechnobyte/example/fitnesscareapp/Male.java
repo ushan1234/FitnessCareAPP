@@ -42,6 +42,7 @@ public class Male extends AppCompatActivity {
         gender = findViewById(R.id.textgender);
 
         ok = findViewById(R.id.bok);
+        ok.setVisibility(View.GONE);
 
 
 
@@ -52,25 +53,34 @@ public class Male extends AppCompatActivity {
         Calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String getW=Weight.getText().toString();
-                String getH=Hight.getText().toString();
+
+                if (Weight.getText().toString().equals("") || Hight.getText().toString().equals("")){
+                    Toast.makeText(Male.this, "plese enter hight and weight", Toast.LENGTH_SHORT).show();
+                }else {
+                    String getW=Weight.getText().toString();
+                    String getH=Hight.getText().toString();
 
                     float W=Float.parseFloat(getW);
-                float H=Float.parseFloat(getH);
+                    float H=Float.parseFloat(getH);
 
-                float newH=H/100;
-                float bmi=W/(newH*newH);
+                    float newH=H/100;
+                    float bmi=W/(newH*newH);
 
-                if (bmi<18.5)
-                {
-                    Answer.setText("You Are Underweight");
+                    if (bmi<18.5)
+                    {
+                        Answer.setText("You Are Underweight");
+                    }
+                    else if (bmi>=18.5&&bmi<25){
+                        Answer.setText("You Are Normal");
+                    }
+                    else {
+                        Answer.setText("You Are Under");
+                    }
+
+                    ok.setVisibility(View.VISIBLE);
                 }
-                else if (bmi>=18.5&&bmi<25){
-                    Answer.setText("You Are Normal");
-                }
-                else {
-                    Answer.setText("You Are Under");
-                }
+
+
 
 
             }
@@ -81,18 +91,27 @@ public class Male extends AppCompatActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isInserted= myDb.inserData(gender.getText().toString(),
-                        date.getText().toString(),
-                        Weight.getText().toString(),
-                        Hight.getText().toString(),
-                        Answer.getText().toString()
-                        );
+
+//                if (Weight.getText().equals("") || Hight.getText().equals("") ){
+//
+//                }else {
+                    boolean isInserted= myDb.inserData(gender.getText().toString(),
+                            date.getText().toString(),
+                            Weight.getText().toString(),
+                            Hight.getText().toString(),
+                            Answer.getText().toString()
+                    );
 
 
-                if (isInserted == true)
-                    Toast.makeText(Male.this,"Data Inserted",Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(Male.this,"Data not Inserted",Toast.LENGTH_LONG).show();
+                    if (isInserted == true)
+                        Toast.makeText(Male.this,"Data Inserted",Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(Male.this,"Data not Inserted",Toast.LENGTH_LONG).show();
+
+                    startActivity(new Intent(Male.this, BmiCall1.class));
+
+
+//                }
 
 
 

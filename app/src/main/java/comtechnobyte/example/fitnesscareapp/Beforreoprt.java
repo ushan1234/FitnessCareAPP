@@ -42,7 +42,7 @@ public class Beforreoprt/*<myDb>*/ extends AppCompatActivity {
 
         disspalyData();
 
-        bmiAdapter = new BmiAdapter(Beforreoprt.this, recyclerView, date, id);
+        bmiAdapter = new BmiAdapter(Beforreoprt.this, recyclerView, date, id, gender, hight,weight, answer);
         recyclerView.setAdapter(bmiAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Beforreoprt.this));
 
@@ -50,7 +50,6 @@ public class Beforreoprt/*<myDb>*/ extends AppCompatActivity {
 
 
     void disspalyData() {
-        date.clear();
         Cursor cursor = myDb.readAllData();
         if (cursor.getCount() == 0) {
             Toast.makeText(this,"No data.", Toast.LENGTH_LONG).show();
@@ -59,10 +58,10 @@ public class Beforreoprt/*<myDb>*/ extends AppCompatActivity {
             while (cursor.moveToNext()) {
                 date.add(cursor.getString(2));
                 id.add(cursor.getString(0));
-//                gender.add(cursor.getString(1));
-//                answer.add(cursor.getString(2));
-//                weight.add(cursor.getString(3));
-//                hight.add(cursor.getString(4));
+                gender.add(cursor.getString(1));
+                answer.add(cursor.getString(5));
+                weight.add(cursor.getString(3));
+                hight.add(cursor.getString(4));
             }
         }
     }

@@ -1,6 +1,9 @@
 package comtechnobyte.example.fitnesscareapp;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +19,18 @@ import java.util.ArrayList;
 public  class BmiAdapter extends RecyclerView.Adapter<BmiAdapter.MyViewHolder> {
 
     private Context context;
-    private ArrayList date , gender, answer;
-    ArrayList id;
+    private ArrayList id, date , gender, answer, height, weight;
     private RecyclerView recyclerView;
 
-    BmiAdapter(Context context, RecyclerView recyclerView, ArrayList date, ArrayList id) {
+    BmiAdapter(Context context, RecyclerView recyclerView, ArrayList date, ArrayList id, ArrayList gender, ArrayList height, ArrayList weight, ArrayList answer) {
         this.context = context;
         this.recyclerView = recyclerView;
         this.date=date;
         this.id = id;
+        this.gender = gender;
+        this.height = height;
+        this.weight = weight;
+        this.answer = answer;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -57,21 +63,52 @@ public  class BmiAdapter extends RecyclerView.Adapter<BmiAdapter.MyViewHolder> {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, ""+id.get(position), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, Report.class);
+                    intent.putExtra("gender", gender.get(position).toString());
+                    intent.putExtra("date", date.get(position).toString());
+                    intent.putExtra("height", height.get(position).toString());
+                    intent.putExtra("weight", weight.get(position).toString());
+                    intent.putExtra("answer", answer.get(position).toString());
+                    context.startActivity(intent);
                 }
             });
 
             holder.deleteBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Database database = new Database(context);
-                    database.deleteReport(String.valueOf(id.get(position)));
 
-                    date.remove(position);
-                    recyclerView.removeViewAt(position);
-                    notifyItemRemoved(position);
-                    notifyItemRangeChanged(position, date.size());
-                    notifyDataSetChanged();
+                    final AlertDialog alertDialog = new AlertDialog.Builder(context)
+
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .setTitle("Delete")
+                            .setMessage("Are you sure to delete")
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    //set what would happen when positive button is clicked
+                                    Database database = new Database(context);
+                                    database.deleteReport(String.valueOf(id.get(position)));
+                                    dialogInterface.cancel();
+                                }
+                            })
+
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.cancel();
+                                    //set what should happen when negative button is clicked
+                                }
+                            })
+                            .show();
+
+
+
+
+//                    date.remove(position);
+//                    recyclerView.removeViewAt(position);
+//                    notifyItemRemoved(position);
+//                    notifyItemRangeChanged(position, date.size());
+//                    notifyDataSetChanged();
 
                 }
             });
