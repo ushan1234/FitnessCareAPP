@@ -13,6 +13,8 @@
     <string name="Lbtn">Login</string>
     <string name="textView5">New Here? Create Account</string>
     <string name="Email">Enter your Email</string>
+    <string name="fitsapp">FitsApp</string>
+    <string name="make_yourself_proud">Make Yourself Proud</string>
     <string-array name="names">
         <item>--Select Your Blood Type--</item>
         <item>A+</item>
