@@ -72,7 +72,9 @@ public class BmiCall1 extends AppCompatActivity {
         report.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(BmiCall1.this,Beforreoprt.class));
+                Intent intent = new Intent(BmiCall1.this,Beforreoprt.class);
+                startActivity(intent);
+                //startActivity(new Intent(BmiCall1.this,Beforreoprt.class));
 
             }
         });

@@ -68,9 +68,9 @@ public class Database extends SQLiteOpenHelper  {
 
         Cursor cursor = null;
         if (myDb != null){
-           cursor = myDb.rawQuery(query, selectionArgs, null);
 
-            //myDb.execSQL(query);
+
+            cursor =myDb.rawQuery(query,null);
         }
         return cursor;
 

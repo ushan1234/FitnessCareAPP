@@ -55,7 +55,7 @@ public class Male extends AppCompatActivity {
                 String getW=Weight.getText().toString();
                 String getH=Hight.getText().toString();
 
-                float W=Float.parseFloat(getW);
+                    float W=Float.parseFloat(getW);
                 float H=Float.parseFloat(getH);
 
                 float newH=H/100;

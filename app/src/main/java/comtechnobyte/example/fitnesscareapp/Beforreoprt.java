@@ -1,6 +1,7 @@
 package comtechnobyte.example.fitnesscareapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.database.Cursor;
@@ -9,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public abstract class Beforreoprt<myDb> extends AppCompatActivity {
+public class Beforreoprt/*<myDb>*/ extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
@@ -20,7 +21,7 @@ public abstract class Beforreoprt<myDb> extends AppCompatActivity {
     ArrayList<String>weight;
     ArrayList<String>hight;
 
-
+    BmiAdapter bmiAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,10 @@ public abstract class Beforreoprt<myDb> extends AppCompatActivity {
 
         disspalyData();
 
+        bmiAdapter = new BmiAdapter(Beforreoprt.this,date,gender,answer);
+        recyclerView.setAdapter(bmiAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(Beforreoprt.this));
+
     } 
 
 
@@ -49,10 +54,10 @@ public abstract class Beforreoprt<myDb> extends AppCompatActivity {
         } else {
             while (cursor.moveToNext()) {
                 date.add(cursor.getString(0));
-                gender.add(cursor.getString(0));
-                answer.add(cursor.getString(0));
-                weight.add(cursor.getString(0));
-                hight.add(cursor.getString(0));
+                gender.add(cursor.getString(1));
+                answer.add(cursor.getString(2));
+                weight.add(cursor.getString(3));
+                hight.add(cursor.getString(4));
             }
         }
     }
