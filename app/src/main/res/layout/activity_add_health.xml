@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/regi"
+    android:background="@color/design_default_color_on_secondary"
     tools:context=".AddHealth">
 
     <EditText
@@ -101,6 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/baloo"
         android:text="Add Your Record"
         android:textColor="#FF9800"
         android:textSize="24sp"

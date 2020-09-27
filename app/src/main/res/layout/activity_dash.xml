@@ -48,17 +48,20 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/healthicon"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/health"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/health" />
+
                 <TextView
+                    android:id="@+id/healthtext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:text="Health"
-                    android:textSize="18sp"
                     android:textColor="#fff"
-                    android:layout_marginTop="20dp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

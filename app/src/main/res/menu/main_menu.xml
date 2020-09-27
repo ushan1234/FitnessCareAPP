@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+
+        <item
+            android:id="@+id/nav_health"
+            android:title="Health"
+            android:icon="@drawable/health_icon"/>
+
+        <item
+            android:id="@+id/nav_bmi"
+            android:title="BMI"
+            android:icon="@drawable/bmi_icon"/>
+
+        <item
+            android:id="@+id/nav_exercise"
+            android:title="Exercise"
+            android:icon="@drawable/exercise_icon"/>
+
+        <item
+            android:id="@+id/nav_food"
+            android:title="Food"
+            android:icon="@drawable/food_icon"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/logout_icom"/>
+            </menu>
+
+        </item>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share"
+                android:icon="@drawable/share"/>
+            <item
+                android:id="@+id/nav_rate"
+                android:title="Rate Us"
+                android:icon="@drawable/rate"/>
+        </menu>
+    </item>
+
+</menu>
