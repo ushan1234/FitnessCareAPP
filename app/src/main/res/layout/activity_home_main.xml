@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".MainActivity">
-
+    tools:context=".Home_main">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/common_google_signin_btn_text_dark_focused"
         android:orientation="vertical"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,16 +18,16 @@
 
 
         <TextView
-            android:layout_width="278dp"
+            android:layout_width="296dp"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
-            android:text="Diet Report"
+            android:text="Manage Your Diet"
             android:textAlignment="textEnd"
             android:textColor="#FBFBFB"
             android:textSize="36sp" />
 
         <GridLayout
-            android:layout_width="397dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
@@ -41,16 +38,16 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/h1"
-                android:layout_width="380dp"
-                android:layout_height="180dp"
-                android:layout_margin="10dp"
+                android:layout_width="364dp"
+                android:layout_height="110dp"
+                android:layout_margin="20dp"
                 app:cardBackgroundColor="#25221e"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout
                     android:id="@+id/add"
-                    android:layout_width="match_parent"
+                    android:layout_width="367dp"
                     android:layout_height="match_parent"
                     android:background="#25221e"
                     android:gravity="center"
@@ -58,35 +55,37 @@
 
                     <ImageView
                         android:id="@+id/addimage"
-                        android:layout_width="120dp"
-                        android:layout_height="93dp"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
                         android:layout_marginTop="12dp"
-                        android:src="@drawable/addreport" />
+                        android:src="@drawable/c"
+                        app:srcCompat="@drawable/bmr" />
+
 
                     <TextView
                         android:id="@+id/addtext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="Add New Diet Report"
+                        android:text="BMR Calculator"
                         android:textColor="#fff"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/h2"
-                android:layout_width="380dp"
-                android:layout_height="180dp"
-                android:layout_margin="10dp"
+                android:id="@+id/c1"
+                android:layout_width="367dp"
+                android:layout_height="110dp"
+                android:layout_margin="20dp"
                 app:cardBackgroundColor="#25221e"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:id="@+id/view"
+                    android:id="@+id/acc"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#25221e"
@@ -94,25 +93,61 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/viewimage"
-                        android:layout_width="120dp"
-                        android:layout_height="93dp"
+                        android:id="@+id/addima"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_marginTop="12dp"
-                        android:src="@drawable/viewfolder" />
+                        android:src="@drawable/di" />
+
+                    <TextView
+                        android:id="@+id/addte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Calorie Calculator"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/h2"
+                android:layout_width="369dp"
+                android:layout_height="110dp"
+                android:layout_margin="20dp"
+                app:cardBackgroundColor="#25221e"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:id="@+id/view"
+                    android:layout_width="367dp"
+                    android:layout_height="match_parent"
+                    android:background="#25221e"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/viewimage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/report" />
 
                     <TextView
                         android:id="@+id/viewtext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:text="View Diet Reports"
+                        android:text="Diet Report"
                         android:textColor="#fff"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
         </GridLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

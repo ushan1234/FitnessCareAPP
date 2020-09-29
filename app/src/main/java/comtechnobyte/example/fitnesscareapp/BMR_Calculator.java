@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class BMR_Calculator extends AppCompatActivity {
-    EditText weight, height;
+    EditText weight, height, age;
     TextView resulttext;
     String calculation, BMIresult;
+    Spinner spinner;
+    char text;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,9 @@ public class BMR_Calculator extends AppCompatActivity {
         weight = findViewById(R.id.weight);
         height = findViewById(R.id.height);
         resulttext = findViewById(R.id.result);
+        age = findViewById(R.id.age);
+
+
     }
 
 
@@ -26,33 +34,28 @@ public class BMR_Calculator extends AppCompatActivity {
     public void calculateBMI(View view) {
         String S1 = weight.getText().toString();
         String S2 = height.getText().toString();
+        String S3 = age.getText().toString();
 
 
 
-        float weightValue = Float.parseFloat(S1);
-        float heightValue = Float.parseFloat(S2) / 100;
+
+        double weightValue = Float.parseFloat(S1);
+        double heightValue = Float.parseFloat(S2);
+        double ageValue = Float.parseFloat(S3);
 
 
 
-        float bmi = weightValue / (heightValue * heightValue);
+        double bmi = 88.362 + (13.397 * weightValue) + (4.799*heightValue) + (5.677*ageValue);
 
 
 
-        if(bmi < 16){
-            BMIresult = "Severely Under Weight";
-        }else if(bmi < 18.5){
-            BMIresult = "Under Weight";
-        }else if(bmi >= 18.5 && bmi <= 24.9){
-            BMIresult = "Normal Weight";
-        }else if (bmi >= 25 && bmi <= 29.9){
-            BMIresult = "Overweight";
-        }else{
-            BMIresult = "Obese";
-        }
 
 
 
-        calculation = "Result:nn" + bmi + "n" + BMIresult;
+
+
+
+        calculation =  bmi + " calories" ;
 
 
 

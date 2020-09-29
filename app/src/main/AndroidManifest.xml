@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="comtechnobyte.example.fitnesscareapp">
-    <uses-permission  android:name="android.permission.INTERNET"></uses-permission>
 
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Calorie_Cal" />
-        <activity android:name=".BMR_Calculator">
+        <activity android:name=".CalarieList" />
+        <activity android:name=".AddReport" />
+        <activity android:name=".BMR_Calculator" />
+        <activity android:name=".CalorieReport" />
+        <activity android:name=".Home_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
