@@ -4,26 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#221E1E"
+    android:backgroundTint="#1B1C1C"
+    android:scrollbarThumbHorizontal="@android:drawable/dialog_holo_dark_frame"
+    android:scrollbarTrackHorizontal="@android:drawable/dialog_holo_dark_frame"
     tools:context=".BmiCall1">
+
 
     <Button
         android:id="@+id/Breport"
         android:layout_width="372dp"
         android:layout_height="50dp"
-        android:background="#BEB5D5"
-        android:backgroundTint="#B3A5D6"
+        android:background="#25221e"
         android:text="@string/report"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintVertical_bias="0.861" />
 
     <RadioGroup
         android:id="@+id/genderGroup"
         android:layout_width="185dp"
         android:layout_height="83dp"
+        android:background="#221E1E"
+        android:backgroundTint="#1B1C1C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.659"
@@ -35,33 +42,44 @@
             android:id="@+id/rmale"
             android:layout_width="339dp"
             android:layout_height="44dp"
+            android:backgroundTint="#E3D6D6"
             android:buttonTint="#020000"
-            android:text="Male" />
+            android:text="Male"
+
+            android:textAllCaps="true"
+            android:textColor="#F6F2F2"
+            android:textColorHighlight="#EAE4E4"
+            android:textColorHint="#E1D4D4" />
 
         <RadioButton
             android:id="@+id/rfemale"
             android:layout_width="93dp"
             android:layout_height="29dp"
+            android:backgroundTint="#EFECEC"
             android:buttonTint="#020000"
-            android:text="@string/female" />
+
+            android:text="@string/female"
+            android:textAllCaps="true"
+            android:textColor="#F6F2F2" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/textCal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="49dp"
         android:layout_marginTop="53dp"
         android:layout_marginBottom="181dp"
-        android:background="#5CD8B0"
-        android:backgroundTint="#BDD5C3"
+        android:background="#1B1C1C"
+        android:backgroundTint="#1B1C1C"
         android:breakStrategy="high_quality"
         android:focusableInTouchMode="true"
         android:fontFamily="cursive"
         android:text="@string/cal"
-        android:textColor="#100B0B"
+        android:textColor="#E3DADA"
         android:textCursorDrawable="@android:drawable/alert_dark_frame"
         android:textSelectHandle="@drawable/ic_launcher_background"
         android:textSize="35dp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -73,25 +91,27 @@
         android:id="@+id/nextbtn"
         android:layout_width="370dp"
         android:layout_height="46dp"
-        android:background="#BEB5D5"
-        android:backgroundTint="#B3A5D6"
+        android:background="#25221e"
+        android:scrollbarThumbHorizontal="@android:drawable/dialog_holo_dark_frame"
+        android:scrollbarTrackHorizontal="@android:drawable/dialog_holo_dark_frame"
         android:text="@string/next"
+        android:textColor="#DCD8D8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.634"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.71" />
+        app:layout_constraintVertical_bias="0.737" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="144dp"
-        android:layout_height="171dp"
+        android:layout_width="417dp"
+        android:layout_height="160dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.529"
-        app:srcCompat="@drawable/rw0707endq_01_1501869602" />
+        app:srcCompat="@drawable/bmi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
+    android:background="#1B1C1C"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -13,37 +14,43 @@
         android:layout_width="401dp"
         android:layout_height="65dp"
         android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp">
+        android:layout_marginEnd="1dp"
+        android:background="#1B1C1C"
+        android:backgroundTint="#1B1C1C"
+        app:cardBackgroundColor="#1B1C1C">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="417dp"
-            android:layout_height="match_parent"><![CDATA[
+            android:layout_width="447dp"
+            android:layout_height="wrap_content"
+            android:background="#D9DADC"
+            android:backgroundTint="#1B1C1C"><![CDATA[
             android:padding = "12dp">
             ]]>
 
 <!--            <TextView-->
-<!--                android:id="@+id/txtgender_list"-->
-<!--                android:layout_width="67dp"-->
-<!--                android:layout_height="33dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
+            <!--                android:id="@+id/txtgender_list"-->
+            <!--                android:layout_width="67dp"-->
+            <!--                android:layout_height="33dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/txtanswer_list"-->
-<!--                android:layout_width="61dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.861"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintVertical_bias="0.457" />-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/txtanswer_list"-->
+            <!--                android:layout_width="61dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.861"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:layout_constraintVertical_bias="0.457" />-->
 
             <TextView
                 android:id="@+id/txtdate_list"
                 android:layout_width="76dp"
                 android:layout_height="33dp"
+                android:textColor="#E3DADA"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

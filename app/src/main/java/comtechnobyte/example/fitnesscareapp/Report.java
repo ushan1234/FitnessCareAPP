@@ -11,6 +11,10 @@ import java.nio.file.Files;
 public class Report extends AppCompatActivity {
 
     TextView gendertxt;
+    TextView answertxt;
+    TextView heighttxt;
+    TextView weighttxt;
+    TextView datetxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +22,18 @@ public class Report extends AppCompatActivity {
         setContentView(R.layout.activity_report);
 
         gendertxt  = findViewById(R.id.gender_report);
+        answertxt= findViewById(R.id.answer_report);
+        heighttxt= findViewById(R.id.height_report);
+        weighttxt=findViewById(R.id.weight_report);
+        datetxt= findViewById(R.id.date_report);
 
         Intent intent = getIntent();
 
         gendertxt.setText(intent.getStringExtra("gender"));
+        answertxt.setText(intent.getStringExtra("answer"));
+        heighttxt.setText(intent.getStringExtra("height"));
+        weighttxt.setText(intent.getStringExtra("weight"));
+        datetxt.setText(intent.getStringExtra("date"));
 
     }
 }
