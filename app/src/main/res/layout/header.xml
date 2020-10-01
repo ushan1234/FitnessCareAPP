@@ -18,12 +18,12 @@
         android:fontFamily="@font/baloo"
         android:text="Beginning Of New Journey"
         android:textColor="#fff"
-        android:textSize="24sp" />
+        android:textSize="14sp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="www.fitsapp.com"
-        android:textSize="14sp"
+        android:textSize="10sp"
         android:textColor="#fff"/>
 
 </LinearLayout>
