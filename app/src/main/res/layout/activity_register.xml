@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/common_google_signin_btn_text_dark_focused"
+    android:background="@drawable/gradient"
     tools:context=".Register">
 
     <TextView
@@ -91,6 +91,7 @@
         android:ems="10"
         android:fontFamily="serif"
         android:hint="@string/Pwd"
+        android:drawableRight="@drawable/regi_pass"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,6 +104,7 @@
         android:layout_marginTop="20dp"
         android:background="@android:color/background_light"
         android:ems="10"
+        android:drawableRight="@drawable/regi_pass"
         android:fontFamily="serif"
         android:hint="@string/Rpwd"
         android:inputType="textPassword"
@@ -116,7 +118,7 @@
         android:layout_width="334dp"
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
-        android:background="@android:color/holo_orange_dark"
+        android:background="@drawable/rounded_button"
         android:fontFamily="serif"
         android:text="@string/Rbtn"
         app:layout_constraintEnd_toEndOf="parent"

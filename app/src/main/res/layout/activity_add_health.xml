@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_on_secondary"
+    android:background="@drawable/gradient"
     tools:context=".AddHealth">
 
     <EditText
@@ -89,7 +89,7 @@
         android:layout_width="122dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:background="@android:color/holo_red_light"
+        android:background="@drawable/add_button"
         android:text="Add To Report"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
