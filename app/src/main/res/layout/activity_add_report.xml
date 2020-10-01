@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#090909"
+    android:background="@drawable/gradient"
     tools:context=".AddReport">
 
     <EditText
@@ -16,6 +16,8 @@
         android:ems="10"
         android:hint="Fat "
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugar" />
@@ -28,6 +30,8 @@
         android:background="@android:color/background_light"
         android:entries="@array/Meal"
         android:textAlignment="center"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +58,10 @@
         android:ems="10"
         android:hint="Enter The Meal You Had (Eg:Rice,Egg)"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +76,8 @@
         android:ems="10"
         android:hint="No Of Calories"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pressure" />
@@ -79,8 +89,10 @@
         android:layout_marginTop="40dp"
         android:background="@android:color/background_light"
         android:ems="10"
-        android:hint="Last Checked Date"
+        android:hint="Date"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,11 +100,12 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="122dp"
-        android:layout_height="45dp"
+        android:layout_width="154dp"
+        android:layout_height="39dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_red_light"
         android:text="Add To Report"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

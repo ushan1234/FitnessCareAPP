@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home_main">
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -38,7 +39,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/h1"
-                android:layout_width="364dp"
+                android:layout_width="366dp"
                 android:layout_height="110dp"
                 android:layout_margin="20dp"
                 app:cardBackgroundColor="#25221e"
@@ -46,8 +47,8 @@
                 app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:id="@+id/add"
-                    android:layout_width="367dp"
+                    android:id="@+id/bmrcalculator"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#25221e"
                     android:gravity="center"
@@ -58,7 +59,7 @@
                         android:layout_width="130dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="12dp"
-                        android:src="@drawable/c"
+                        android:src="@drawable/caloriecal"
                         app:srcCompat="@drawable/bmr" />
 
 
@@ -85,7 +86,7 @@
                 app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:id="@+id/acc"
+                    android:id="@+id/caloriecal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#25221e"
@@ -113,7 +114,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/h2"
+                android:id="@+id/dr"
                 android:layout_width="369dp"
                 android:layout_height="110dp"
                 android:layout_margin="20dp"

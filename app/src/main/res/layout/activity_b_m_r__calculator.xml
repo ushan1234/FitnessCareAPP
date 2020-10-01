@@ -51,9 +51,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="17dp"
         android:textAlignment="center"
         android:textColor="#05E60E"
         android:textSize="30sp" />
