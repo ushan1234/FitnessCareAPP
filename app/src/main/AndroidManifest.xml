@@ -9,22 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Report"></activity>
+        <activity android:name=".underw"></activity>
         <activity android:name=".complited" />
-        <activity android:name=".Streaching" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Report" />
         <activity android:name=".Shoutinstar" />
         <activity android:name=".plank" />
+        <activity android:name=".Streaching" />
         <activity android:name=".DIF" />
+        <activity android:name=".Ereport"/>
         <activity android:name=".Treadmill" />
         <activity android:name=".Currentsituation" />
-        <activity android:name=".excersices" />
-        <activity android:name=".MainActivity">
+            <activity android:name=".excersices" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
