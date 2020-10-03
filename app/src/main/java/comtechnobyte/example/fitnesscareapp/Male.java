@@ -21,7 +21,7 @@ public class Male extends AppCompatActivity {
 
     private Button Calculate,ok;
     private EditText Weight, Hight;
-    private TextView Answer, date, gender;
+    private TextView Answer, date, gender, value ;
 
 
 
@@ -40,6 +40,7 @@ public class Male extends AppCompatActivity {
         Answer = findViewById(R.id.txCal);
         date = findViewById(R.id.textdate);
         gender = findViewById(R.id.textgender);
+        value= findViewById(R.id.txtvalue);
 
         ok = findViewById(R.id.bok);
         ok.setVisibility(View.GONE);
@@ -55,27 +56,65 @@ public class Male extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (Weight.getText().toString().equals("") || Hight.getText().toString().equals("")){
-                    Toast.makeText(Male.this, "plese enter hight and weight", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Male.this, "Please enter height and weight", Toast.LENGTH_SHORT).show();
                 }else {
                     String getW=Weight.getText().toString();
                     String getH=Hight.getText().toString();
 
+
+
                     float W=Float.parseFloat(getW);
                     float H=Float.parseFloat(getH);
 
-                    float newH=H/100;
-                    float bmi=W/(newH*newH);
+                  //  float newH=H/100;
+                    //float bmi=W/(newH*newH);
+                    float bmi = calBMI(W,H);
 
-                    if (bmi<18.5)
-                    {
-                        Answer.setText("You Are Underweight");
+
+                    if (Float.compare(bmi, 15f) <= 0) {
+                       Answer.setText("very_severely_underweight");
+                       String var = String.format("%.2f",bmi);
+                       value.setText(var);
+
+                    } else if (Float.compare(bmi, 15f) > 0  &&  Float.compare(bmi, 16f) <= 0) {
+                        Answer.setText("severely_underweight");
+                        String var = String.format("%.2f",bmi);
+                        value.setText(var);
+                        //value.setText(String.valueOf(bmi));
+                    } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
+                        Answer.setText("underweight");
+                        String var = String.format("%.2f",bmi);
+                        value.setText(var);
+                       // value.setText(String.valueOf(bmi));
+                    } else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
+                        Answer.setText("normal");
+                        String var = String.format("%.2f",bmi);
+                        value.setText(var);
+
+                       // value.setText(String.valueOf(bmi));
+                    } else if (Float.compare(bmi, 25f) > 0  &&  Float.compare(bmi, 30f) <= 0) {
+                        Answer.setText("overweight");
+                        String var = String.format("%.2f",bmi);
+                        value.setText(var);
+                       // value.setText(String.valueOf(bmi));
+                    } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
+                        Answer.setText("obese_class_i");
+                        String var = String.format("%.2f",bmi);
+                        value.setText(var);
+                       // value.setText(String.valueOf(bmi));
+                    } else if (Float.compare(bmi, 35f) > 0  &&  Float.compare(bmi, 40f) <= 0) {
+                        Answer.setText("obese_class_ii");
+                        String var = String.format("%.2f",bmi);
+                        value.setText(var);
+                       // value.setText(String.valueOf(bmi));
+                    } else {
+                        Answer.setText("obese_class_iii");
+                        String var = String.format("%.2f",bmi);
+                        value.setText(var);
+                        //value.setText(String.valueOf(bmi));
                     }
-                    else if (bmi>=18.5&&bmi<25){
-                        Answer.setText("You Are Normal");
-                    }
-                    else {
-                        Answer.setText("You Are Under");
-                    }
+
+
 
                     ok.setVisibility(View.VISIBLE);
                 }
@@ -83,7 +122,7 @@ public class Male extends AppCompatActivity {
 
 
 
-            }
+           }
 
         });
 
@@ -92,14 +131,15 @@ public class Male extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-//                if (Weight.getText().equals("") || Hight.getText().equals("") ){
-//
-//                }else {
+                if (Weight.getText().equals("") || Hight.getText().equals("") ){
+
+              }else {
                     boolean isInserted= myDb.inserData(gender.getText().toString(),
                             date.getText().toString(),
                             Weight.getText().toString(),
                             Hight.getText().toString(),
-                            Answer.getText().toString()
+                            Answer.getText().toString(),
+                            value.getText().toString()
                     );
 
 
@@ -111,12 +151,19 @@ public class Male extends AppCompatActivity {
                     startActivity(new Intent(Male.this, BmiCall1.class));
 
 
-//                }
+             }
 
 
 
             }
         });
 
+    }
+
+    public float calBMI(float weight,float height){
+
+        float h = (height /100)*(height /100);
+        float bmi = (weight/h);
+        return bmi;
     }
 }

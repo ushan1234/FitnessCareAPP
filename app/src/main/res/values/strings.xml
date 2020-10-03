@@ -10,4 +10,18 @@
     <string name="Fhight">Enter Your Hight (CM) :</string>
     <string name="btcalutat">CALCULATE</string>
     <string name="next">" CALCULATAR"</string>
+    <string name="value1">value</string>
+
+
+    <string name="very_severly_underweight">Very severely underweight</string>
+    <string name="severly_underweight">Severly underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="ovwerweight">Overweight</string>
+    <string name="obese_class_1">Obese Class 1</string>
+    <string name="obese_class_2">Obese Class 2</string>
+    <string name="obese_class_3">Obese Class 3</string>
+    <string name="bmivalue">text</string>
+
+
 </resources>

@@ -15,6 +15,7 @@ public class Report extends AppCompatActivity {
     TextView heighttxt;
     TextView weighttxt;
     TextView datetxt;
+    TextView textView4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class Report extends AppCompatActivity {
         heighttxt= findViewById(R.id.height_report);
         weighttxt=findViewById(R.id.weight_report);
         datetxt= findViewById(R.id.date_report);
+        textView4 = findViewById(R.id.textView4);
 
         Intent intent = getIntent();
 
@@ -34,6 +36,7 @@ public class Report extends AppCompatActivity {
         heighttxt.setText(intent.getStringExtra("height"));
         weighttxt.setText(intent.getStringExtra("weight"));
         datetxt.setText(intent.getStringExtra("date"));
+        textView4.setText(intent.getStringExtra("value"));
 
     }
 }

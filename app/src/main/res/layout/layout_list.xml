@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    android:background="#1B1C1C"
+    android:background="@drawable/gradient"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView

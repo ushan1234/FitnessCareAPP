@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B1C1C"
-    android:backgroundTint="#1B1C1C"
+    android:background="@drawable/gradient"
+
     tools:context=".Male">
 
     <TextView
@@ -38,7 +38,7 @@
         android:id="@+id/txCal"
         android:layout_width="371dp"
         android:layout_height="38dp"
-        android:text="@string/answer"
+         
         android:textAlignment="center"
         android:textColor="#E3DADA"
         android:textSize="24dp"
@@ -47,7 +47,7 @@
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.851" />
 
     <Button
         android:id="@+id/btnCal"
@@ -113,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903" />
+        app:layout_constraintVertical_bias="0.952" />
 
     <TextView
         android:id="@+id/textgender"
@@ -139,5 +139,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042"
         app:srcCompat="@drawable/cal" />
+
+    <TextView
+        android:id="@+id/txtvalue"
+        android:layout_width="213dp"
+        android:layout_height="62dp"
+
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:textColor="#E3DADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

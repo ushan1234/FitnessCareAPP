@@ -19,10 +19,10 @@ import java.util.ArrayList;
 public  class BmiAdapter extends RecyclerView.Adapter<BmiAdapter.MyViewHolder> {
 
     private Context context;
-    private ArrayList id, date , gender, answer, height, weight;
+    private ArrayList id, date , gender, answer, height, weight,value;
     private RecyclerView recyclerView;
 
-    BmiAdapter(Context context, RecyclerView recyclerView, ArrayList date, ArrayList id, ArrayList gender, ArrayList height, ArrayList weight, ArrayList answer) {
+    BmiAdapter(Context context, RecyclerView recyclerView, ArrayList date, ArrayList id, ArrayList gender, ArrayList height, ArrayList weight, ArrayList answer,ArrayList value) {
         this.context = context;
         this.recyclerView = recyclerView;
         this.date=date;
@@ -31,6 +31,7 @@ public  class BmiAdapter extends RecyclerView.Adapter<BmiAdapter.MyViewHolder> {
         this.height = height;
         this.weight = weight;
         this.answer = answer;
+        this.value = value;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -69,6 +70,7 @@ public  class BmiAdapter extends RecyclerView.Adapter<BmiAdapter.MyViewHolder> {
                     intent.putExtra("height", height.get(position).toString());
                     intent.putExtra("weight", weight.get(position).toString());
                     intent.putExtra("answer", answer.get(position).toString());
+                    intent.putExtra("value", value.get(position).toString());
                     context.startActivity(intent);
                 }
             });

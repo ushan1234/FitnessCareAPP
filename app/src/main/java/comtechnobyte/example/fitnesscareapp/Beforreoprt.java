@@ -20,6 +20,7 @@ public class Beforreoprt/*<myDb>*/ extends AppCompatActivity {
     ArrayList<String>answer;
     ArrayList<String>weight;
     ArrayList<String>hight;
+    ArrayList<String>value;
 
     ArrayList<String>id;
 
@@ -39,10 +40,11 @@ public class Beforreoprt/*<myDb>*/ extends AppCompatActivity {
         weight = new ArrayList<>();
         hight = new ArrayList<>();
         id = new ArrayList<>();
+        value = new  ArrayList<>();
 
         disspalyData();
 
-        bmiAdapter = new BmiAdapter(Beforreoprt.this, recyclerView, date, id, gender, hight,weight, answer);
+        bmiAdapter = new BmiAdapter(Beforreoprt.this, recyclerView, date, id, gender, hight,weight, answer,value);
         recyclerView.setAdapter(bmiAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Beforreoprt.this));
 
@@ -62,6 +64,7 @@ public class Beforreoprt/*<myDb>*/ extends AppCompatActivity {
                 answer.add(cursor.getString(5));
                 weight.add(cursor.getString(3));
                 hight.add(cursor.getString(4));
+                value.add(cursor.getString(6));
             }
         }
     }
