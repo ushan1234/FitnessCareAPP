@@ -66,8 +66,7 @@ public class Male extends AppCompatActivity {
                     float W=Float.parseFloat(getW);
                     float H=Float.parseFloat(getH);
 
-                  //  float newH=H/100;
-                    //float bmi=W/(newH*newH);
+
                     float bmi = calBMI(W,H);
 
 
@@ -80,38 +79,37 @@ public class Male extends AppCompatActivity {
                         Answer.setText("severely_underweight");
                         String var = String.format("%.2f",bmi);
                         value.setText(var);
-                        //value.setText(String.valueOf(bmi));
+
                     } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
                         Answer.setText("underweight");
                         String var = String.format("%.2f",bmi);
                         value.setText(var);
-                       // value.setText(String.valueOf(bmi));
+
                     } else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
                         Answer.setText("normal");
                         String var = String.format("%.2f",bmi);
                         value.setText(var);
 
-                       // value.setText(String.valueOf(bmi));
                     } else if (Float.compare(bmi, 25f) > 0  &&  Float.compare(bmi, 30f) <= 0) {
                         Answer.setText("overweight");
                         String var = String.format("%.2f",bmi);
                         value.setText(var);
-                       // value.setText(String.valueOf(bmi));
+
                     } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
                         Answer.setText("obese_class_i");
                         String var = String.format("%.2f",bmi);
                         value.setText(var);
-                       // value.setText(String.valueOf(bmi));
+
                     } else if (Float.compare(bmi, 35f) > 0  &&  Float.compare(bmi, 40f) <= 0) {
                         Answer.setText("obese_class_ii");
                         String var = String.format("%.2f",bmi);
                         value.setText(var);
-                       // value.setText(String.valueOf(bmi));
+
                     } else {
                         Answer.setText("obese_class_iii");
                         String var = String.format("%.2f",bmi);
                         value.setText(var);
-                        //value.setText(String.valueOf(bmi));
+
                     }
 
 
