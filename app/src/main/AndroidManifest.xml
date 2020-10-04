@@ -12,7 +12,7 @@
         <activity android:name=".underw"></activity>
         <activity android:name=".complited" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Report" />
+        <activity android:name=".report" />
         <activity android:name=".Shoutinstar" />
         <activity android:name=".plank" />
         <activity android:name=".Streaching" />

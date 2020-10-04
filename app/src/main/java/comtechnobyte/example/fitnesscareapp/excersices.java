@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Editable;
+//import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +26,7 @@ import java.util.Calendar;
 public class excersices extends AppCompatActivity implements View.OnClickListener {
     EditText editTextNumber;
     TextView textView40;
-    int number = 100;
+    float number = 100;
     Button bt;
     private static final String TAG = "AddHealth";
 
@@ -89,7 +89,7 @@ public class excersices extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onClick(View view) {
 
-                int inNumber = Integer.parseInt(editTextNumber.getText().toString());
+                float inNumber = Float.parseFloat(editTextNumber.getText().toString());
 
                 if(inNumber <= number){
 
@@ -154,16 +154,20 @@ public class excersices extends AppCompatActivity implements View.OnClickListene
         String Pressure = editTextNumber.getText().toString().trim();
         String Date = date.getText().toString().trim();
 
-        if (!TextUtils.isEmpty(Pressure)) {
+        if (Pressure.isEmpty()) {
+            /*String id = reference.push().getKey();
+            ExeHelper addHealth = new ExeHelper(id, Pressure, Date);
+            reference.child(id).setValue(addHealth);*/
+            Toast.makeText(this, "Enter Records", Toast.LENGTH_LONG).show();
+           // Toast.makeText(this, "You Should Enter Values", Toast.LENGTH_LONG).show();
+        } else {
+
             String id = reference.push().getKey();
             ExeHelper addHealth = new ExeHelper(id, Pressure, Date);
             reference.child(id).setValue(addHealth);
-            Toast.makeText(this, "Add Record", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "You Should Enter Values", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Added", Toast.LENGTH_LONG).show();
         }
     }
 
-    public void button8Clicked(View view) {
-    }
+
 }
