@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="comtechnobyte.example.fitnesscareapp">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,18 +12,18 @@
         <activity android:name=".Das"></activity>
         <activity android:name=".splash" />
         <activity android:name=".Home_health" />
-        <activity android:name=".Dash">
+        <activity android:name=".HealthRecords">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddHealth" />
+        <activity android:name=".Dash" />
         <activity android:name=".Register" />
-        <activity android:name=".HealthRecords" />
-        <activity android:name=".Dashboard" />
         <activity android:name=".Login" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".AddHealth" />
 
         <meta-data
             android:name="preloaded_fonts"
