@@ -12,6 +12,11 @@
         <activity android:name=".Das"></activity>
         <activity android:name=".Home_health" />
         <activity android:name=".HealthRecords"/>
+        <activity android:name=".Report"></activity>
+        <activity android:name=".meal" />
+        <activity android:name=".Option" />
+        <activity android:name=".Select" />
+        <activity android:name=".CalorieCalculator" />
         <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,15 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Dash" />
-        <activity android:name=".Register" />
-        <activity android:name=".Login" />
-        <activity android:name=".Dashboard" />
-        <activity android:name=".AddHealth" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -1,5 +1,42 @@
 <resources>
     <string name="app_name">FitnessCareAPP</string>
+    <string name="Btn1">Calorie Calculator</string>
+    <string name="Btn2">Plan a Diet</string>
+    <string name="Btn3">view diet report</string>
+    <string name="Btn4">view diet report</string>
+    <string name="Btn5">Search</string>
+    <string name="Btn6">Calculate</string>
+    <string name="Btn7">Next</string>
+    <string name="Btn8">Breakfast</string>
+    <string name="Btn9">Lunch</string>
+    <string name="Btn10">Dinner</string>
+    <string name="Btn11">Add to diet report</string>
+    <string name="Btn12">Delete Report</string>
+    <string name="Meg1">Calorie Calculator</string>
+    <string name="Meg2">search the food item you want to calculate of the calorie content</string>
+    <string name="Meg3">Calorie content of the item</string>
+    <string name="Meg4">Weight in grams</string>
+    <string name="Meg5">Calorie content</string>
+    <string name="Meg6">Plan A Diet</string>
+    <string name="Meg7">Select your gender</string>
+    <string name="Meg8">Select the date</string>
+    <string name="Meg9">Select your option</string>
+    <string name="Meg10">Breakfast</string>
+    <string name="Meg11">Recommended calorie content:900k</string>
+    <string name="Meg12">Enter what you had for breakfast</string>
+    <string name="Meg13">Calorie content of the meal</string>
+    <string name="Meg14">Status</string>
+    <string name="Meg15">Diet Report</string>
+    <string name="Meg16">Breakfast</string>
+    <string name="Meg17">Lunch</string>
+    <string name="Meg18">Dinner</string>
+    <string name="Meg19">Daily calorie consumption</string>
+
+
+
+
+
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="textView">Fitness Care App</string>
