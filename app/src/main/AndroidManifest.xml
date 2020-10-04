@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Das"></activity>
-        <activity android:name=".splash" />
         <activity android:name=".Home_health" />
-        <activity android:name=".HealthRecords">
+        <activity android:name=".HealthRecords"/>
+        <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
